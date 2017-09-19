@@ -1,0 +1,66 @@
+<div class="container">
+  <h1>Form</h1>
+  <form>
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" id="id"
+             required
+             [(ngModel)]="model.id" name="id"
+             #id="ngModel">
+      <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+        Id is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name"
+             #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+           class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">location</label>
+      <input type="text" class="form-control" id="location" required
+            [(ngModel)]="model.location" name="name"
+            #location="ngModel">
+      <div [hidden]="location.valid || location.pristine"
+            class="alert alert-danger">
+            Location is required
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">emailid</label>
+      <input type="text" class="form-control" id="email" required
+      [(ngModel)]="model.email" name="name"
+      #email="ngModel">
+       <div [hidden]="email.valid || email.pristine"
+           class="alert alert-danger">
+               Location is required
+       </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name">location</label>
+        <input type="text" class="form-control" id="gitUrl" required
+              [(ngModel)]="model.gitUrl" name="name"
+              #gitUrl="ngModel">
+        <div [hidden]="gitUrl.valid || gitUrl.pristine"
+              class="alert alert-danger">
+              Url is required
+        </div>
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
+
